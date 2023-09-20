@@ -12,7 +12,7 @@ repositories {
 dependencies {
     testImplementation platform('org.junit:junit-bom:5.9.1')
     testImplementation 'org.junit.jupiter:junit-jupiter'
-    implementation ("org.hibernate:hibernate-entitymanager:5.6.15.Final")
+    implementation ("org.hibernate:hibernate-entitymanager:5.6.7.Final")
     implementation 'com.h2database:h2:2.2.220'
 }
 
