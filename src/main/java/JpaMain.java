@@ -1,5 +1,4 @@
-import jpabook.jpashop.domain.Order;
-import jpabook.jpashop.domain.OrderItem;
+import jpabook.jpashop.domain.*;
 
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
@@ -14,12 +13,11 @@ public class JpaMain {
         EntityTransaction tx = em.getTransaction();
         tx.begin();
         try {
-            Order order = new Order();
-            em.persist(order);
-
-            OrderItem orderItem = new OrderItem();
-            orderItem.setOrder(order);
-            em.persist(orderItem);
+            Member member = new Member();
+            member.setUserName("hello");
+            member.setHomeAddress(new Address("city", "street", "10"));
+            member.setWorkPeriod(new Period());
+            em.persist(member);
             tx.commit();
         } catch (Exception e) {
             e.printStackTrace();
