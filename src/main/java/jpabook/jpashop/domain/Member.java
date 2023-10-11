@@ -8,7 +8,7 @@ import java.util.List;
 import java.util.Set;
 
 @Entity
-public class Member {
+public class Member extends BaseEntity {
 
     @Id
     @GeneratedValue
@@ -18,11 +18,9 @@ public class Member {
     @Column(name = "USERNAME")
     private String userName;
 
-    //기간 Period
     @Embedded
     private Period workPeriod;
 
-    //주소
     @Embedded
     private Address homeAddress;
 
